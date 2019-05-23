@@ -30,6 +30,8 @@ return [
     */
 
     'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+        // 'host' => env('MAIL_HOST', 'smtp.gmail.com'),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -54,10 +56,14 @@ return [
     | used globally for all e-mails that are sent by your application.
     |
     */
+    //  'from' => [
+    //     'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
+    //     'name' => env('MAIL_FROM_NAME', 'Example'),
+    // ],
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'email@email.com'),
+        'name' => env('MAIL_FROM_NAME', 'Do not Reply'),
     ],
 
     /*

@@ -22,6 +22,9 @@
       <li class="nav-item">
         <a class="nav-link" href="/sample">Sample</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/testmail">Test_Mail</a>
+      </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="/report">Report</a>
       </li> -->

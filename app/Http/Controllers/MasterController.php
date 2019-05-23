@@ -7,15 +7,19 @@ use App\Usertemp;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
 
+use Mail;
+use App\Mail\DemoMail;
+
 class MasterController extends Controller
 {
     // Master controller
-     public function __construct()
+    public function __construct()
     {
         $this->middleware('auth');
     }
     public function User(Request $request)
     {   
+        $name = 'John';
         if($request->session()->has('login_user')==1)
         {
              $data['data']=Usertemp::All();
@@ -68,5 +72,10 @@ class MasterController extends Controller
         ->where('id', $id)
         ->update($data);
         return redirect('/sample');
+    }
+    public function MailScript()
+    {
+      Mail::to('#')->send(new DemoMail());
+      return redirect('/sample');//back();//Global back function
     }
 }
