@@ -75,7 +75,7 @@ class MasterController extends Controller
     }
     public function MailScript()
     {
-      Mail::to('sandipbhagwat15@gmail.com')->send(new DemoMail());
+      Mail::to('temp@gmail.com')->send(new DemoMail());
       return redirect('/sample');//back();//Global back function
     }
 }

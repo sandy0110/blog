@@ -34,3 +34,11 @@ Auth::routes();
 // Route::get('/home', 'HomeController@index');
 Route::get('/testmail', 'MasterController@MailScript');
 
+Route::get('/add','CarController@create');
+Route::post('/add','CarController@store');
+// Route::get('/car','CarController@index');
+Route::get('/add/{id}','CarController@create');
+Route::post('/edit','CarController@update');
+Route::delete('/remove/{id}','CarController@destroy');
+Route::get('/show','CarController@showList');
+
